@@ -1,0 +1,281 @@
+<html>
+<head>
+<script type = "text/javascript">
+function validateform()
+{
+	
+var y = parseInt(document.forms["add"]["empphno"].value);
+if(Number.isInteger(y) == false)
+{
+	alert('phone number must be in integer');
+	return false;
+}
+	
+var x = parseInt(document.forms["add"]["pin"].value);
+if(Number.isInteger(x) == false)
+{
+	alert('Pincode must be in integer');
+	return false;
+}
+
+var ad = parseInt(document.forms["add"]["adhar"].value);
+if(Number.isInteger(y) == false)
+{
+	alert('Adhar card number must be in integer');
+	return false;
+}
+
+var y = parseInt(document.forms["add"]["acntno"].value);
+if(Number.isInteger(y) == false)
+{
+	alert('Account number must be in integer');
+	return false;
+}
+
+
+var filename=document.getElementById('file').value;
+
+var extension=filename.substr(filename.lastIndexOf('.')+1).toLowerCase();
+var size = document.getElementById('file').files[0].size;
+
+	
+	//alert size
+	if(size >=1048576 )
+	{
+		alert('File size must be less than 1MB');
+		return false;
+	}
+	
+    //alert(extension);
+    if(extension=='jpg' || extension=='jpeg') 
+	{
+        return true;
+    } 
+	{
+        alert('The Extension must be in jpeg or jpg');
+        return false;
+    }
+
+}
+
+</script>
+
+<style type="text/css">
+body{
+	    background-image: url(http://del-corazon.org/wp-content/uploads/2012/10/white-background1.jpg);
+
+}
+
+/*the background of the form*/
+.form-style-5{
+    max-width: 500px;
+    padding: 10px 20px;
+    /*background-image: url(http://www.terates.com/wp-content/uploads/2014/11/1338750888-nice-background.jpg);*/
+    margin: 10px auto;
+    padding: 20px;
+   /* background-image: url(http://www.terates.com/wp-content/uploads/2014/11/1338750888-nice-background.jpg);*/
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-style-5 fieldset{
+    border: none;
+
+}
+/*employee update field*/
+.form-style-5 legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #d8334d;
+}
+/*form headings */
+.form-style-5 label {
+    display: block;
+    margin-bottom: 8px;
+        color: #292929;
+
+}
+
+
+/*the form field color*/
+.form-style-5 input[type="text"],
+
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    background-color: #0c84b0;
+    color:#fff;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 10px;
+    
+}
+
+.form-style-5 input[type="date"]{
+  font-family: Georgia, "Times New Roman", Times, serif;
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 10%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    background-color: #0c0c0c;
+    color:#fff;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 10px;
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus{
+    background: #feb44d;/* after focus on field*/
+}
+.form-style-5 select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+.form-style-5 .number {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+/*the first color of submit*/
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"]
+{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    /*margin: 0 auto;*/
+    background: #d8334d;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #fff;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+
+/*after the submit color*/
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover
+{
+    background: #feb44d;
+}
+</style>
+</head>
+<body>
+<div class="form-style-5">
+<form onsubmit = "return validateform()" method = "POST" action = "addemp.php" name = "add" enctype="multipart/form-data">
+
+<fieldset>
+
+<legend></span> Employee Info</legend><hr>
+ <label>FIRST NAME:</label> <input type = "text" name = "empfname"  placeholder = "firstname" required>
+<label>LAST NAME:<label><input type = "text" name = "emplname" name = "empfname"  placeholder = "Lastname" required>
+<label>DATE OF BIRTH</label>
+
+<label>DAY:</label><input type = "number" name = "empday" min = "01" max = "31" required>
+<label>MONTH:</label><input type = "number" name = "empmon" min = "01" max = "12" required>
+<label>YEAR:</label><input type = "number" name = "empyear" min = "1965" max = "2005"  minlength = "1965" required>
+
+<label>GENDER:</label> <br><input type = "radio" name = "gender" value = "male" required> Male
+						<input type = "radio" name = "gender" value = "female" > Female
+						<br><br>
+<label>Select Department</label>
+
+<select id="job" name="field4">
+<optgroup>
+  <option value=""></option>
+  <option value="DM">DIGITAL MARKETING</option>
+  <option value="PPD">PHP/PYTHON DEVELOPER</option>
+  <option value="CD">CONTENT DEVELOPER</option>
+  <option value="BDE">BUSINESS DEVELOPMENT EXECUTIVE</option>
+  <option value="UX/UI">UX/UI DESIGNER</option>
+  <option value="AD">APP DEVELOPER</option>
+  <option value="GD">GRAPHIC DESIGNER</option>
+</optgroup>
+</select>      
+
+<label>Blood Group</label>
+<select id="blood" name="field4">
+<optgroup>
+  <option value=""></option>
+  <option value="DM">O+(ve)</option>
+  <option value="PPD">O-(ve)</option>
+  <option value="CD">A+(ve)</option>
+  <option value="BDE">A-(ve)</option>
+  <option value="UX/UI">B+(ve)</option>
+  <option value="AD">B-(ve)</option>
+  <option value="GD">AB+(ve)</option>
+  <option value="GD">AB-(ve)</option>
+</optgroup>
+</select>      
+
+<label>PHONE NUMBER:</label> <input type = "text" maxlength = "12" minlength = "10" name = "empphno" required >
+ <label>EMAIL-ID:</label><input type = "email" name = "empemailid" required >
+  <label>ADDRESS DETAILS:</label>
+			Address Line 1: <input type = "text" name = "empaddr" required>
+			Address Line 2: <input type = "text" name = "empaddrs" required>
+			Address Line 3: <input type = "text" name = "empaddrss" required>
+			Pincode: <input type = "text" name = "pin" maxlength = "6" minlength = "6" required>
+			
+<label>ADHAR CARD NUMBER</label> <input type = "text" name = "adhar" maxlength = "12" minlength = "12" required>
+<label>PAN CARD NUMBER:</label> <input type = "text" name = "pan" maxlength = "12" minlength = "10" required>
+<hr><hr>
+<legend>BANK ACCOUNT DETAILS:</legend>
+			<label>Bank Name:</label> <input type = "text" name = "bname" required>
+			<label>Branch:</label>  <input type = "text" name = "branch" required>
+			<label>Account Holder Name:</label> <input type = "text" name = "acnt" required>
+			<label>Account Number:</label> <input type = "text" name = "acntno" required>
+			<label>IFSC Code:</label> <input type = "text" name = "ifsc" required>
+			<hr><hr>
+		 <legend>EMPLOYEE PHOTO:</legend>
+		<label>upload photo:</label><input id = "image" type = "file" name = "image" accept = "image/*" required>
+
+</fieldset>
+
+<input type="submit" value="Submit" />
+
+</form>
+</div>
+</body>
+</html>
